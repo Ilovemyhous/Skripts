@@ -1,0 +1,32 @@
+command /cf:
+	trigger:
+		chance of 50%:
+			set action bar of player to "&e&lPile!"
+			stop
+		else:
+			set action bar of player to "&e&lFace!"
+			stop
+command /coinflip:
+	trigger:
+		chance of 50%:
+			set action bar of player to "&e&lPile!"
+			stop
+		else:
+			set action bar of player to "&e&lFace!"
+			stop
+command /pileouface:
+	trigger:
+		chance of 50%:
+			set action bar of player to "&e&lPile!"
+			stop
+		else:
+			set action bar of player to "&e&lFace!"
+			stop
+command /pof:
+	trigger:
+		chance of 50%:
+			set action bar of player to "&e&lPile!"
+			stop
+		else:
+			set action bar of player to "&e&lFace!"
+			stop

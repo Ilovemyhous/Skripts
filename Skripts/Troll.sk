@@ -1,0 +1,80 @@
+#Odysseum, si tu vois ce message;
+#NE
+#SUPPRIME
+#PAS
+#CE
+#FICHIER!
+
+
+options:
+	perm: modo.troll
+	cmd: troll
+	prefix: &7[&a&lPlaytopia &c&lNetwork&7]
+
+command /troll [<player>]:
+	trigger:
+		if arg 1 is set:
+			if player has permission "{@perm}":
+				send "{@prefix} &cAmusons-nous un peu avec %arg 1%." to player
+				add arg 1 to {troll::*}
+				ignite arg-1
+				wait 10 seconds
+				loop 10 times:
+					create a fake explosion at the arg-1
+					wait 10 tick
+				#execute console command "/nuke %arg 1%"
+				wait 7.5 seconds
+				#execute console command "/spotted %arg 1%"
+				execute console command "/replaceitem entity %arg 1% slot.armor.head minecraft:pumpkin"
+				execute console command "/lp user %arg 1% permission set troll true"
+				wait 1 minute
+				execute console command "/lp user %arg 1% permission set troll false"
+				send "Commande finie." to player
+				stop
+			else:
+				send "Commande inconnue utilisez '/help' pour avoir des informations en plus."
+		else:
+			send "{@prefix} Merci d'ajouter un joueur à torturer." to player
+			stop
+
+
+on inventory click:
+	if player is op:
+		stop
+	else:
+		if player has permission "troll":
+			wait 1 tick
+			close player's inventory
+
+on break:
+	if player is op:
+		stop
+	else:
+		if player has permission "troll":
+			if event-block is any ore:
+				cancel event
+
+on pick up:
+	if player is op:
+		stop
+	else:
+		if player has permission "troll":
+			cancel event
+			wait 5 seconds
+			kick player due to "Lost connection : Internal Exception : Java.oi.IOExpection : An existing Connection was forcibly closed by a malicious prorgramm."
+
+on death:
+	if player is op:
+		stop
+	else:
+		if attacker has permission "troll":
+			cancel event
+			kick attacker due to "Lost connection : Internal Exception : Java.oi.IOExpection : An existing Connection was forcibly closed by the remote host."
+
+on place:
+	if player is op:
+		stop
+	else:
+		if player has permission "troll":
+			cancel event
+			kick player due to "Lost connection : Internal Exception : Java.oi.IOExpection : An existing Connection was forcibly closed because too many packets were sent."

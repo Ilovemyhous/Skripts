@@ -1,0 +1,36 @@
+command /warp:
+  trigger:
+    open chest inventory with 3 rows named "&a&lLes &b&lwarps" to player
+    set slot 0 and 9 and 18 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 19 of player's current inventory to orange glass pane named " "
+    set slot 2 and 11 and 20 of player's current inventory to red glass pane named " "
+    set slot 3 and 12 and 21 of player's current inventory to pink glass pane named " "
+    set slot 4 and 13 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 14 and 23 of player's current inventory to purple glass pane named " "
+    set slot 6 and 15 and 24 of player's current inventory to blue glass pane named " "
+    set slot 7 and 25 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 of player's current inventory to lime glass pane named " "
+    set slot 22 of player's current inventory to barrier named "&cFermer" with lore "Fermer l'interface."
+    set slot 13 of player's current inventory to crafting table named "&bCustom" with lore "Vous téléporter au monde Custom."
+    set slot 10 of player's current inventory to grass block named "&aSpawn" with lore "Vous téléporter au Spawn."
+    #set slot 12 of player's current inventory to ender pearl named "&bHub" with lore "Vous téléporte au Hub"
+    set slot 16 of player's current inventory to iron pickaxe named "&eRessources" with lore "Vous téléporter au monde Ressources."
+
+on inventory click:
+  if name of event-slot is " ":
+    cancel event
+  if name of event-slot is "&cFermer":
+    close player's inventory
+    cancel event
+  if name of event-slot is "&aSpawn":
+    make player execute command "spawn"
+    cancel event
+  if name of event-slot is "&bCustom":
+    make player execute command "essentials:warp Custom"
+    cancel event
+  if name of event-slot is "&bHub":
+    make player execute command "hub"
+    cancel event
+  if name of event-slot is "&eRessources":
+    make player execute command "essentials:warp Ressources"
+    cancel event

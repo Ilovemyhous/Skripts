@@ -1,0 +1,205 @@
+command /help:
+  trigger:
+    open chest inventory with 3 rows named "&a&lAide &e- &bPar Ilovemyhouse" to player
+    set slot 0 and 9 and 18 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 19 of player's current inventory to orange glass pane named " "
+    set slot 2 and 11 and 20 of player's current inventory to red glass pane named " "
+    set slot 3 and 21 of player's current inventory to pink glass pane named " "
+    set slot 4 and 13 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 14 and 23 of player's current inventory to purple glass pane named " "
+    set slot 6 and 15 and 24 of player's current inventory to blue glass pane named " "
+    set slot 7 and 25 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 of player's current inventory to lime glass pane named " "
+
+    set slot 10 of player's current inventory to oak fence named "&bLes claims" with lore "Catégorie d'aide sur les claims."
+    set slot 12 of player's current inventory to crafting table named "&6Les jobs" with lore "Catégorie d'aide sur les jobs."
+    set slot 14 of player's current inventory to diamond block named "&aLa banque" with lore "Catégorie d'aide sur la banque."
+    set slot 16 of player's current inventory to chest named "&eAutres" with lore "Catégorie sur les autres commandes."
+    set slot 22 of player's current inventory to barrier named "&cFermer" with lore "Fermer l'interface."
+
+
+on inventory click:
+  if name of event-slot is " ":
+    cancel event
+  if name of event-slot is "&cFermer":
+    close player's inventory
+    cancel event
+
+
+  if name of event-slot is "&bLes claims":
+    open chest inventory with 3 rows named "&b&lLes claims" to player
+    set slot 0 and 9 and 18 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 10 and 19 of player's current inventory to orange glass pane named " "
+    set slot 2 and 20 of player's current inventory to red glass pane named " "
+    set slot 3 and 21 of player's current inventory to pink glass pane named " "
+    set slot 4 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 23 of player's current inventory to purple glass pane named " "
+    set slot 6 and 24 of player's current inventory to blue glass pane named " "
+    set slot 7 and 16 and 25 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 of player's current inventory to lime glass pane named " "
+
+    set slot 11 of player's current inventory to oak fence named "&a/chunk claim" with lore "/chunk claim, claimera le chunk actuel." and "Des particules seront affiché pour montrer" and "la délimitation du chunk." and "Cella vous coûtera 100$ par chunk." and "Les 5 premiers chunks sont gratuit."
+    set slot 12 of player's current inventory to dark oak fence named "&b/chunk access" with lore "/chunk access [joueur], permet" and "de gérer l'accès de" and "vos claims aux joueurs."
+    set slot 15 of player's current inventory to birch fence named "&c/chunk unclaim" with lore "/chunk unclaim, va unclaim le" and "chunk actuel si vous" and "êtes le propriètaire," and "et vous recevrez 10$ en retour."
+    set slot 13 of player's current inventory to jungle fence named "&e/chunk auto" with lore "/chunk auto, va automatiquement" and "claim les chunks que vous" and "entrez, s'ils sont unclaim."
+    set slot 14 of player's current inventory to spruce fence named "&6/chunk alert" with lore "/chunk alert, vous avertira si" and "un joueur entre dans vos claims."
+    set slot 22 of player's current inventory to barrier named "&cRetour" with lore "Retour en arrière."
+    cancel event
+
+
+  if name of event-slot is "&6Les jobs":
+    open chest inventory with 3 rows named "&6&lLes jobs" to player
+    set slot 0 and 9 and 18 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 10 and 19 of player's current inventory to orange glass pane named " "
+    set slot 2 and 11 and 20 of player's current inventory to red glass pane named " "
+    set slot 3 and 21 of player's current inventory to pink glass pane named " "
+    set slot 4 and 13 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 23 of player's current inventory to purple glass pane named " "
+    set slot 6 and 15 and 24 of player's current inventory to blue glass pane named " "
+    set slot 7 and 16 and 25 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 of player's current inventory to lime glass pane named " "
+    set slot 22 of player's current inventory to barrier named "&cRetour" with lore "Retour en arrière."
+
+    set slot 12 of player's current inventory to emerald named "&3/jobs browse" with lore "/jobs browse, ouvre une interface" and "pour choisir les travaills." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 13 of player's current inventory to torch named "&9/jobs info" with lore "/jobs info, ouvre une interface" and "qui vous montre vos statistiques" and "des vos jobs." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 14 of player's current inventory to paper named "&e/jobs stats [joueur]" with lore "/jobs stats [joueur], permet d'afficher" and "les statistiques de vos métiers."
+    cancel event
+
+
+  if name of event-slot is "&aLa banque":
+    open chest inventory with 3 rows named "&a&lLa banque" to player
+    set slot 0 and 9 and 18 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 10 and 19 of player's current inventory to orange glass pane named " "
+    set slot 2 and 11 and 20 of player's current inventory to red glass pane named " "
+    set slot 3 and 21 of player's current inventory to pink glass pane named " "
+    set slot 4 and 13 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 23 of player's current inventory to purple glass pane named " "
+    set slot 6 and 15 and 24 of player's current inventory to blue glass pane named " "
+    set slot 7 and 16 and 25 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 of player's current inventory to lime glass pane named " "
+    set slot 22 of player's current inventory to barrier named "&cRetour" with lore "Retour en arrière."
+
+    set slot 12 of player's current inventory to emerald named "&a/bank deposit [montant]" with lore "/bank deposit [montant], vous permet de" and "déposer de l'argent dans la banque."
+    set slot 13 of player's current inventory to paper named "&c/bank withdraw [montant]" with lore "/bank withdraw [montant], vous permet de" and "retirer de l'argent de la banque."
+    set slot 14 of player's current inventory to book named "&d/bank balance" with lore "/bank balance, vous affiche l'argent" and "actuel dans votre banque." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+
+
+  if name of event-slot is "&eAutres":
+    open chest inventory with 5 rows named "&e&lAutres" to player
+    set slot 0 and 9 and 18 and 27 and 36 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 28 and 37 of player's current inventory to orange glass pane named " "
+    set slot 2 and 29 and 38 of player's current inventory to red glass pane named " "
+    set slot 3 and 39 of player's current inventory to pink glass pane named " "
+    set slot 4 and 31 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 41 of player's current inventory to purple glass pane named " "
+    set slot 6 and 33 and 42 of player's current inventory to blue glass pane named " "
+    set slot 7 and 34 and 43 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 and 35 and 44 of player's current inventory to lime glass pane named " "
+    set slot 40 of player's current inventory to barrier named "&cRetour" with lore "Retour en arrière."
+
+    set slot 10 of player's current inventory to chest named "&e/ah sell [montant]" with lore "/ah sell [montant], vend votre item que" and "vous avez en main, avec le prix entré."
+    set slot 11 of player's current inventory to paper named "&3/baltop" with lore "/baltop, montre la liste des joueurs" and "les plus riches du serveur." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 12 of player's current inventory to tnt named "&c/delhome [home]" with lore "/delhome [home], permet de retirer un de vos homes."
+    set slot 13 of player's current inventory to paper named "&9/discord" with lore "/discord, vous donne lien de notre Discord." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 14 of player's current inventory to book named "&9/discord link" with lore "/discord link, lie votre nom d'utilisateur" and "Minecraft, avec notre Discord." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 15 of player's current inventory to ender pearl named "&6/home [home]" with lore "/home [home], vous téléporte au home spécifié."
+    set slot 16 of player's current inventory to emerald named "&a/money" with lore "/money, affiche l'argent que vous avez sur vous." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 19 of player's current inventory to string named "&f/msg [joueur] [message]" with lore "/msg, permet d'envoier un message privé" and "au joueur spécifié."
+    set slot 20 of player's current inventory to jukebox named "&d/music" with lore "/music, ourvre une interface pour" and "jouer de la musique." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 21 of player's current inventory to rail named "&3/pay [joueur] [montant]" with lore "/pay, transfère votre argent au joueuer spécifié."
+    set slot 22 of player's current inventory to ender eye named "&4/rtp" with lore "/rtp, vous téléporte aléatoirement." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 23 of player's current inventory to arrow named "&2/sethome [home]" with lore "/sethome [home], crée un home à" and "votre position actuelle avec le nom donné."
+    set slot 24 of player's current inventory to glowstone dust named "&a/spawn" with lore "/spawn, vous téléporte au spawn." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 25 of player's current inventory to diamond sword named "&4/suicide" with lore "/suicide, vous tue." and "&1&oCliquez-ici pour exécuter" and "&1&ola commande."
+    set slot 30 of player's current inventory to redstone named "&3/tpa [joueur]" with lore "/tpa [joueur], envoie une demande de" and "téléportation au joueur ciblé."
+    set slot 32 of player's current inventory to ender chest named "&6/trade [joueur]" with lore "/trade [joueur] envoie une demande" and "d'échange au joueur ciblé."
+
+
+  if name of event-slot is "&a/chunk claim":
+    cancel event
+  if name of event-slot is "&b/chunk access":
+    cancel event
+  if name of event-slot is "&e/chunk auto":
+    cancel event
+  if name of event-slot is "&6/chunk alert":
+    cancel event
+  if name of event-slot is "&c/chunk unclaim":
+    cancel event
+
+  if name of event-slot is "&3/jobs browse":
+    make player execute command "jobs browse"
+    cancel event
+  if name of event-slot is "&9/jobs info":
+    make player execute command "jobs info"
+    cancel event
+  if name of event-slot is "&e/jobs stats [joueur]":
+    cancel event
+
+  if name of event-slot is "&a/bank deposit [montant]":
+    cancel event
+  if name of event-slot is "&c/bank withdraw [montant]":
+    cancel event
+  if name of event-slot is "&d/bank balance":
+    make player execute command "bank balance"
+    cancel event
+
+  if name of event-slot is "&e/ah sell [montant]":
+    cancel event
+  if name of event-slot is "&3/baltop":
+    make player execute command "baltop"
+    cancel event
+  if name of event-slot is "&c/delhome [home]":
+    cancel event
+  if name of event-slot is "&9/discord":
+    make player execute command "discord"
+    cancel event
+  if name of event-slot is "&9/discord link":
+    make player execute command "discord link"
+    cancel event
+  if name of event-slot is "&6/home [home]":
+    cancel event
+  if name of event-slot is "&a/money":
+    make player execute command "money"
+    cancel event
+  if name of event-slot is "&f/msg [joueur] [message]":
+    cancel event
+  if name of event-slot is "&d/music":
+    make player execute command "music"
+    cancel event
+  if name of event-slot is "&3/pay [joueur] [montant]":
+    cancel event
+  if name of event-slot is "&4/rtp":
+    make player execute command "rtp"
+    cancel event
+  if name of event-slot is "&2/sethome [home]":
+    cancel event
+  if name of event-slot is "&a/spawn":
+    make player execute command "spawn"
+    cancel event
+  if name of event-slot is "&4/suicide":
+    cancel event
+    wait 1 second
+    kill player
+  if name of event-slot is "&3/tpa [joueur]":
+    cancel event
+  if name of event-slot is "&6/trade [joueur]":
+    cancel event
+
+  if name of event-slot is "&cRetour":
+    open chest inventory with 3 rows named "&a&lAide - &c&lEN DÉVELOPPEMENT" to player
+    set slot 0 and 9 and 18 of player's current inventory to yellow glass pane named " "
+    set slot 1 and 19 of player's current inventory to orange glass pane named " "
+    set slot 2 and 11 and 20 of player's current inventory to red glass pane named " "
+    set slot 3 and 21 of player's current inventory to pink glass pane named " "
+    set slot 4 and 13 of player's current inventory to magenta glass pane named " "
+    set slot 5 and 14 and 23 of player's current inventory to purple glass pane named " "
+    set slot 6 and 15 and 24 of player's current inventory to blue glass pane named " "
+    set slot 7 and 25 of player's current inventory to light blue glass pane named " "
+    set slot 8 and 17 and 26 of player's current inventory to lime glass pane named " "
+
+    set slot 10 of player's current inventory to oak fence named "&bLes claims" with lore "Catégorie d'aide sur les claims."
+    set slot 12 of player's current inventory to crafting table named "&6Les jobs" with lore "Catégorie d'aide sur les jobs."
+    set slot 14 of player's current inventory to diamond block named "&aLa banque" with lore "Catégorie d'aide sur la banque."
+    set slot 16 of player's current inventory to chest named "&eAutres" with lore "Catégorie sur les autres commandes."
+    set slot 22 of player's current inventory to barrier named "&cFermer" with lore "Fermer l'interface."
+    cancel event

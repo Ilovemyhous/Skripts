@@ -9,7 +9,7 @@
 options:
 	perm: modo.troll
 	cmd: troll
-	prefix: &7[&a&lPlaytopia &c&lNetwork&7]
+	prefix: &7[&a&lServer name&7]
 
 command /troll [<player>]:
 	trigger:

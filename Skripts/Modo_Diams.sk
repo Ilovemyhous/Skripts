@@ -1,5 +1,5 @@
 on break:
-	if world is "Custom":
+	if world is "World name":
 		if player has permission "admin":
 			stop
 		else:
@@ -7,11 +7,10 @@ on break:
 				cancel event
 				set event-block to air
 				send "&cMerci d'aller miner en Ressources !" to player
-	else if world is "Ressources":
+	else if world is "Another world name":
 		if player has permission "admin":
 			stop
 		else:
 			if event-block is diamond ore:
 				send action bar "&c&l%player% a miné un diamant en %location of block%!" to all players where [input has permission "modo.diamond"]
-				wait 3 seconds
 				set action bar of all players where [input has permission "modo.diamond"] to ""
